@@ -3,4 +3,9 @@ name = "a"
 version = "0.1.0"
 authors = ["Danilo Bargen <mail@dbrgn.ch>"]
 
-[dependencies]
+[lib]
+name = "a"
+crate-type = ["rlib", "cdylib"]
+
+[build-dependencies]
+cbindgen = "*"

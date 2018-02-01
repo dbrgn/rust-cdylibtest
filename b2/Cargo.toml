@@ -9,3 +9,6 @@ crate-type = ["cdylib"]
 
 [dependencies]
 a = { path = "../a" }
+
+[build-dependencies]
+cbindgen = "*"

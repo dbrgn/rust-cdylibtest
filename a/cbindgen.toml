@@ -1,0 +1,8 @@
+language = "C"
+braces = "SameLine"
+
+[parse]
+parse_deps = false
+
+[fn]
+args = "Vertical"

@@ -1,0 +1,9 @@
+language = "C"
+braces = "SameLine"
+
+[parse]
+parse_deps = true
+include = ["a"]
+
+[fn]
+args = "Vertical"

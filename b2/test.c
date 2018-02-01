@@ -7,6 +7,10 @@
 int main() {
     printf("Test start\n");
 
+    printf("\nFrom b2 crate:\n");
+    printf("Output: %s\n", goodbye_world());
+
+    printf("\nFrom a crate:\n");
     world_pointer_t *world = make_world();
     print_world(world);
 

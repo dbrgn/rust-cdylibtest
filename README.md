@@ -12,6 +12,16 @@
 
 the `libb.so` file does not expose those symbols.
 
-- creating wrapper functions works kind-of (see crate `b2`), but it's quite
-  ugly.
+- creating wrapper functions works kind-of (see crate `b2`), but it's quite ugly.
 - also, for some reason, `test.c` in `b2` segfaults while `test.c` in `a` works fine.
+
+    $ cd b2
+    $ cc test.c -L target/debug -l b2 -o test
+    $ LD_LIBRARY_PATH=target/debug ./test
+    Test start
+
+    From b2 crate:
+    Output: Goodbye, world!
+
+    From a crate:
+    Segmentation fault (core dumped)

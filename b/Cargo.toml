@@ -1,0 +1,11 @@
+[package]
+name = "b"
+version = "0.1.0"
+authors = ["Danilo Bargen <mail@dbrgn.ch>"]
+
+[lib]
+name = "b"
+crate-type = ["cdylib"]
+
+[dependencies]
+a = { path = "../a" }

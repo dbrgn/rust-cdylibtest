@@ -1,8 +1,8 @@
-- crate a contains two `no_mangle` functions (`make_world` and `print_world`)
+crate a contains two `no_mangle` functions (`make_world` and `print_world`)
 
-- crate b depends on a and re-exports those functions, and adds an additional function (`goodbye_world`)
+crate b depends on a and re-exports those functions, and adds an additional function (`goodbye_world`)
 
-- when checking with `objdump`:
+when checking with `objdump`:
 
     $ objdump -T a/target/debug/liba.so  | grep world
     00000000000030c0 g    DF .text  0000000000000303  Base        print_world
@@ -12,8 +12,8 @@
 
 the `libb.so` file does not expose those symbols.
 
-- creating wrapper functions works kind-of (see crate `b2`), but it's quite ugly.
-- also, for some reason, `test.c` in `b2` segfaults while `test.c` in `a` works fine.
+creating wrapper functions works kind-of (see crate `b2`), but it's quite ugly.
+also, for some reason, `test.c` in `b2` segfaults while `test.c` in `a` works fine.
 
     $ cd b2
     $ cc test.c -L target/debug -l b2 -o test
